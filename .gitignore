@@ -1,0 +1,3 @@
+node_modules/
+session-logs/chrome-profile/
+session-logs/chrome-profile-cdp/

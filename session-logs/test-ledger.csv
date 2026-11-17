@@ -1,0 +1,4 @@
+name,type,location,role,quantity,unit,hazard,links
+Moon Fern,Specimen,Greenhouse,Photosynthesis research,14,plants,None,Nightshade
+Nightshade,Specimen,Greenhouse,Alkaloid source,9,plants,Class 2,Moon Fern
+Brass Telescope,Instrument,Observatory,Star charting,1,units,None,

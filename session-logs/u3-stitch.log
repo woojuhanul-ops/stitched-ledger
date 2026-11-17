@@ -1,0 +1,82 @@
+﻿kiro-cli.exe : Warning: Kiro CLI is running as Administrator. Tools and commands have elevated access to files and syst
+em settings. Restart in a terminal without administrator privileges unless elevated access is intentional.
+At line:1 char:54
++ ... ed-ledger'; & 'C:\Users\aurel\AppData\Local\Kiro-Cli\kiro-cli.exe' ch ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: Kiro C...is intentional.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Hide this warning: kiro-cli settings app.warnOnElevatedPrivileges false
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=9
+[tool] Read File
+[tool] status: InProgress
+[tool] Read File
+[tool] status: InProgress
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=34
+[tool] status: Completed
+[tool] status: Completed
+[tool] Read File
+[tool] status: InProgress
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=20
+[tool] status: Completed
+Now let me read the current state of `src/ui/main.ts` and `web/styles.css`:
+[tool] Read File
+[tool] status: InProgress
+[tool] status: Completed
+[tool] Read File
+[tool] status: InProgress
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=38
+[tool] status: Completed
+The U2 implementation already includes the core stitch features: `clearHighlight`, `applyHighlight` (with `scrollIntoView`), `evidence-row` class, `evidence-cell` class, and evidence chips. I need to check what U3 specifically adds that isn't already there — the stitch line under the chips (`evidence → [Row n, Col col]`) and ensuring the card border is dashed fluorescent. Let me compare what's already in styles.css vs what the spec requires:
+
+**Already done in U2:**
+- `evidence-row td` → dashed outline ✓
+- `evidence-cell` → fluorescent green background ✓
+- `state-answer` → `border-left: 3px solid var(--accent)` — but spec says **dashed** fluorescent left border
+- `clearHighlight` on each new ask ✓
+- `scrollIntoView` ✓
+- Evidence chips formatted `[Row n · col]` ✓
+
+**Missing for U3:**
+1. The card's left border must be **dashed** (currently solid)
+2. The stitch line under the chips: `evidence → [Row n, Col col]` with ` · ` between multiple cells
+
+Let me add these two things:
+[tool] Replace in File
+[tool] status: Pending
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=162
+[tool] status: Completed
+Now add the CSS for the stitch line element:
+[tool] Replace in File
+[tool] status: Pending
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=68
+[tool] status: Completed
+Now add the stitch line to `main.ts`, after the evidence chips block:
+[tool] Replace in File
+[tool] status: Pending
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=252
+[tool] status: Completed
+Now compile:
+[tool] Compile web TypeScript
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=30
+[tool] status: InProgress
+[tool] status: InProgress
+[tool] status: Failed: Compile web TypeScript
+[tool] Compile web TypeScript
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=29
+[tool] status: InProgress
+[tool] status: InProgress
+[tool] status: Completed
+Zero errors. Here's what U3 changed:
+
+**`web/styles.css`**
+- Changed the answer card's left border from `solid` to `dashed` (`border-left: 3px dashed var(--accent)`), matching the spec's "dashed fluorescent left border".
+- Added `.stitch-line` and `.stitch-coords` rules for the new stitch line element.
+
+**`src/ui/main.ts`**
+- Added the stitch line element after the evidence chips, rendered as `evidence → <span>[Row n, Col col] · [Row n, Col col]</span>` (multiple cells joined with ` · `).
+
+Everything else — `clearHighlight` on each new ask, `evidence-row` dashed outline, `evidence-cell` fluorescent fill, and `scrollIntoView` on the first evidence row — was already in place from U2 and remains unchanged.
+
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=68
+`npx tsc -p tsconfig.web.json` exits 0 with no errors.

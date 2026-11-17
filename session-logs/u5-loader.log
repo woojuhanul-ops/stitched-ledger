@@ -1,0 +1,125 @@
+﻿kiro-cli.exe : Warning: Kiro CLI is running as Administrator. Tools and commands have elevated access to files and syst
+em settings. Restart in a terminal without administrator privileges unless elevated access is intentional.
+At line:1 char:54
++ ... ed-ledger'; & 'C:\Users\aurel\AppData\Local\Kiro-Cli\kiro-cli.exe' ch ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: Kiro C...is intentional.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Hide this warning: kiro-cli settings app.warnOnElevatedPrivileges false
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=7
+[tool] List .kiro directory contents
+[tool] status: InProgress
+[tool] status: InProgress
+[tool] List src directory contents
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=59
+[tool] status: InProgress
+[tool] status: InProgress
+[tool] status: Completed
+[tool] status: Completed
+[tool] Read File
+[tool] status: InProgress
+[tool] status: Completed
+[tool] Read File
+[tool] status: InProgress
+[tool] status: Completed
+[tool] Read File
+[tool] status: InProgress
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=50
+[tool] status: Completed
+Now let me read the existing files I need to modify or create alongside:
+[tool] Read File
+[tool] status: InProgress
+[tool] status: Completed
+[tool] List web directory contents
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=49
+[tool] status: InProgress
+[tool] status: InProgress
+[tool] status: Completed
+[tool] Read File
+[tool] status: InProgress
+[tool] Read File
+[tool] status: InProgress
+[tool] status: Completed
+[tool] status: Completed
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=31
+Now let me also read the core index.ts to understand the LedgerTable type and parseLedger signature:
+[tool] Read File
+[tool] status: InProgress
+[tool] status: Completed
+[tool] Read File
+[tool] status: InProgress
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=43
+[tool] status: Completed
+Now let me also check the tsconfig.web.json:
+[tool] Read File
+[tool] status: InProgress
+[tool] status: Completed
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=22
+I have everything I need. Now I'll implement the three changes:
+
+1. `src/ui/loader.ts` — pure `ledgerFromDelimitedText` function
+2. `src/ui/main.ts` — add loader DOM wiring
+3. `web/index.html` — drop zone, restore button, hint line
+4. `web/styles.css` — drop zone, load-error, load-ok, restore button, verify-disabled-note styles
+[tool] Write File
+[tool] status: Pending
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=739
+[tool] status: Completed
+Now update `main.ts` to add the loader DOM wiring. The key changes are:
+
+- Make `table` a `let` (reassignable)
+- Extract grid-build into a `renderGrid()` function
+- Add `isCustomLedger` flag
+- Add all the loader event wiring (drop zone, file input, restore button)
+- Disable verify button while custom ledger is active
+[tool] Write File
+[tool] status: Pending
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=2065
+[tool] status: Completed
+Now update `index.html` to add the drop zone, hint line, load notice, restore button, and verify-custom-note:
+[tool] Write File
+[tool] status: Pending
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=574
+[tool] status: Completed
+Now add the new CSS rules to `styles.css`:
+[tool] Replace in File
+[tool] status: Pending
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=322
+[tool] status: Completed
+Now compile:
+[tool] Compile with web tsconfig
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=31
+[tool] status: InProgress
+[tool] status: InProgress
+[tool] status: Failed: Compile with web tsconfig
+[tool] Compile with web tsconfig
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=30
+[tool] status: InProgress
+[tool] status: InProgress
+[tool] status: Completed
+Zero errors. The compilation succeeded cleanly.
+
+Here's a summary of what was implemented:
+
+**`src/ui/loader.ts`** (new file)
+- Pure `ledgerFromDelimitedText(text, delimiter): LedgerTable` — no side effects, no DOM.
+- Splits lines, honours RFC 4180 double-quote escaping via `splitLine`.
+- Validates the header (all eight required column names present, case-insensitive), then each data row (field count matches header, `quantity` is a finite number, at least one data row).
+- Builds row objects with `links` split on `;` and trimmed, serialises to JSON, and passes through `parseLedger` for final validation.
+- Every failure throws `Error` with a message starting with `File rejected — ` and a specific reason.
+
+**`src/ui/main.ts`** (rewritten)
+- `table` is now a `let` binding so it can be replaced.
+- Grid building extracted to `renderGrid()`, called on initial load and again after any ledger switch.
+- `clearAnswerCard()` helper resets the answer card and evidence highlight.
+- `updateHeaderReadouts()` keeps the header ROWS/COLS readouts in sync with the active table.
+- Drop zone: click opens the hidden file input; drag-over adds `drag-over` class; drop reads the file. Both paths call `handleFile(file)`, which picks the delimiter from the extension and delegates to `ledgerFromDelimitedText`.
+- On success: active table is replaced, grid and readouts are re-rendered, answer card is cleared, a `load-ok` notice is shown, the restore button appears, and the verify button is disabled with a note.
+- On failure: a `load-error` notice is shown; nothing else changes.
+- Restore button: returns `BUILT_IN_TABLE`, re-renders, hides the notice and button, re-enables verify.
+
+**`web/index.html`** — added the loader section (drop zone with hidden `<input type="file">`, hint line, load notice `div`, restore button) and the `#verify-custom-note` element inside the verify panel.
+
+[INFO] [KRS] <-- GenerateAssistantResponseCommand done totalEvents=273
+**`web/styles.css`** — added rules for `.loader-section`, `.drop-zone` (default, hover/focus, `drag-over`), `.loader-hint`, `.load-notice` (base, `.load-ok`, `.load-error`), `.restore-btn`, and `.verify-custom-note`.

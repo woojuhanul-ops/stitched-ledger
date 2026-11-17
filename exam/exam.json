@@ -1,0 +1,1244 @@
+[
+ {
+  "id": 1,
+  "type": "T1",
+  "question": "Where is Sulfuric Acid located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Cabinet A",
+  "expectedEvidence": [
+   {
+    "row": 1,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "type": "T1",
+  "question": "Where is Nitric Acid located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Cabinet A",
+  "expectedEvidence": [
+   {
+    "row": 4,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "type": "T1",
+  "question": "Where is Phosphorus located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Vault Shelf 1",
+  "expectedEvidence": [
+   {
+    "row": 7,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 4,
+  "type": "T1",
+  "question": "Where is Alcohol (Ethanol) located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Cold Room",
+  "expectedEvidence": [
+   {
+    "row": 10,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 5,
+  "type": "T1",
+  "question": "Where is Lightning Rod Assembly located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "North Tower",
+  "expectedEvidence": [
+   {
+    "row": 14,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "type": "T1",
+  "question": "Where is Electrostatic Generator located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Workbench 1",
+  "expectedEvidence": [
+   {
+    "row": 18,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 7,
+  "type": "T1",
+  "question": "Where is Brass Electrometer located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Glass Case",
+  "expectedEvidence": [
+   {
+    "row": 22,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "type": "T1",
+  "question": "Where is Galvanometer located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Glass Case",
+  "expectedEvidence": [
+   {
+    "row": 26,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 9,
+  "type": "T1",
+  "question": "Where is Iron Restraint Frame located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Main Hall",
+  "expectedEvidence": [
+   {
+    "row": 30,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "type": "T1",
+  "question": "Where is Ventilation Hood located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Main Hall",
+  "expectedEvidence": [
+   {
+    "row": 34,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "type": "T1",
+  "question": "Where is Anatomical Atlas located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Reading Desk",
+  "expectedEvidence": [
+   {
+    "row": 39,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "type": "T1",
+  "question": "Where is Iron Chain located?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Cellar Rack",
+  "expectedEvidence": [
+   {
+    "row": 45,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "type": "T2",
+  "question": "What is the role of Ether?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Anesthetic for specimen preparation",
+  "expectedEvidence": [
+   {
+    "row": 2,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "type": "T2",
+  "question": "What is the role of Mercury?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Conductive fluid for switch contacts",
+  "expectedEvidence": [
+   {
+    "row": 6,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "type": "T2",
+  "question": "What is the role of Silver Nitrate?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Staining agent for tissue samples",
+  "expectedEvidence": [
+   {
+    "row": 12,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "type": "T2",
+  "question": "What is the role of Leyden Jar?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Charge storage capacitor",
+  "expectedEvidence": [
+   {
+    "row": 16,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "type": "T2",
+  "question": "What is the role of Spark Gap Transmitter?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Controlled discharge across electrodes",
+  "expectedEvidence": [
+   {
+    "row": 20,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "type": "T2",
+  "question": "What is the role of Insulated Clamp Set?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Safe handling of charged conductors",
+  "expectedEvidence": [
+   {
+    "row": 25,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "type": "T2",
+  "question": "What is the role of Glass Bell Jar?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Vacuum chamber cover",
+  "expectedEvidence": [
+   {
+    "row": 29,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 20,
+  "type": "T2",
+  "question": "What is the role of Drainage Channel?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Fluid runoff from the cellar rack",
+  "expectedEvidence": [
+   {
+    "row": 35,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 21,
+  "type": "T2",
+  "question": "What is the role of Specimen Index Cards?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Catalog of preserved specimens",
+  "expectedEvidence": [
+   {
+    "row": 41,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "type": "T2",
+  "question": "What is the role of Leather Strap Set?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Restraint straps for the platform",
+  "expectedEvidence": [
+   {
+    "row": 47,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 23,
+  "type": "T3",
+  "question": "What is the quantity of Copper Sulfate?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "1200 g",
+  "expectedEvidence": [
+   {
+    "row": 3,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "type": "T3",
+  "question": "What is the quantity of Ammonium Chloride?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "800 g",
+  "expectedEvidence": [
+   {
+    "row": 8,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "type": "T3",
+  "question": "What is the quantity of Galvanic Battery Bank?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "24 cells",
+  "expectedEvidence": [
+   {
+    "row": 13,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 26,
+  "type": "T3",
+  "question": "What is the quantity of Vacuum Pump?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "1 pump",
+  "expectedEvidence": [
+   {
+    "row": 17,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 27,
+  "type": "T3",
+  "question": "What is the quantity of Dynamometer?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "1 instrument",
+  "expectedEvidence": [
+   {
+    "row": 23,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "type": "T3",
+  "question": "What is the quantity of Specimen Jar Set?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "36 jars",
+  "expectedEvidence": [
+   {
+    "row": 28,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 29,
+  "type": "T3",
+  "question": "What is the quantity of Hoist and Pulley?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "1 hoist",
+  "expectedEvidence": [
+   {
+    "row": 32,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 30,
+  "type": "T3",
+  "question": "What is the quantity of Experiment Logbook Volume I?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "1 volume",
+  "expectedEvidence": [
+   {
+    "row": 37,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 31,
+  "type": "T3",
+  "question": "What is the quantity of Zinc Plates?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "40 plates",
+  "expectedEvidence": [
+   {
+    "row": 43,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 32,
+  "type": "T3",
+  "question": "What is the quantity of Glass Tube Bundle?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "20 tubes",
+  "expectedEvidence": [
+   {
+    "row": 48,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 33,
+  "type": "T4",
+  "question": "What is the hazard class of Distilled Water?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 0",
+  "expectedEvidence": [
+   {
+    "row": 5,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 34,
+  "type": "T4",
+  "question": "What is the hazard class of Beeswax?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 0",
+  "expectedEvidence": [
+   {
+    "row": 9,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 35,
+  "type": "T4",
+  "question": "What is the hazard class of Copper Coil?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 1",
+  "expectedEvidence": [
+   {
+    "row": 15,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 36,
+  "type": "T4",
+  "question": "What is the hazard class of Hand-Crank Dynamo?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 1",
+  "expectedEvidence": [
+   {
+    "row": 21,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 37,
+  "type": "T4",
+  "question": "What is the hazard class of Operating Table?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 1",
+  "expectedEvidence": [
+   {
+    "row": 27,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 38,
+  "type": "T4",
+  "question": "What is the hazard class of Marble Slab?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 0",
+  "expectedEvidence": [
+   {
+    "row": 33,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 39,
+  "type": "T4",
+  "question": "What is the hazard class of Electrical Schemas Binder?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 0",
+  "expectedEvidence": [
+   {
+    "row": 40,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "type": "T4",
+  "question": "What is the hazard class of Silk Cloth Roll?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Class 0",
+  "expectedEvidence": [
+   {
+    "row": 46,
+    "col": "hazard"
+   }
+  ]
+ },
+ {
+  "id": 41,
+  "type": "T5",
+  "question": "What is Iron Filings connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Electrostatic Generator",
+  "expectedEvidence": [
+   {
+    "row": 11,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 42,
+  "type": "T5",
+  "question": "What is Condenser Array connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Lightning Rod Assembly, Distilled Water",
+  "expectedEvidence": [
+   {
+    "row": 19,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 43,
+  "type": "T5",
+  "question": "What is Porcelain Insulator Set connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Beeswax, Lightning Rod Assembly",
+  "expectedEvidence": [
+   {
+    "row": 24,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 44,
+  "type": "T5",
+  "question": "What is Surgical Lamp Array connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Alcohol (Ethanol)",
+  "expectedEvidence": [
+   {
+    "row": 31,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 45,
+  "type": "T5",
+  "question": "What is Observation Rail connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Lightning Rod Assembly",
+  "expectedEvidence": [
+   {
+    "row": 36,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 46,
+  "type": "T5",
+  "question": "What is Experiment Logbook Volume II connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Experiment Logbook Volume I, Specimen Index Cards",
+  "expectedEvidence": [
+   {
+    "row": 38,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 47,
+  "type": "T5",
+  "question": "What is Weather Observation Ledger connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Phosphorus, Lightning Rod Assembly",
+  "expectedEvidence": [
+   {
+    "row": 42,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 48,
+  "type": "T5",
+  "question": "What is Copper Wire Spool connected to?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Lightning Rod Assembly, Galvanic Battery Bank, Insulated Clamp Set",
+  "expectedEvidence": [
+   {
+    "row": 44,
+    "col": "links"
+   }
+  ]
+ },
+ {
+  "id": 49,
+  "type": "T6",
+  "question": "How many items are located in Main Hall?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "6",
+  "expectedEvidence": [
+   {
+    "row": 27,
+    "col": "location"
+   },
+   {
+    "row": 30,
+    "col": "location"
+   },
+   {
+    "row": 31,
+    "col": "location"
+   },
+   {
+    "row": 32,
+    "col": "location"
+   },
+   {
+    "row": 34,
+    "col": "location"
+   },
+   {
+    "row": 47,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 50,
+  "type": "T6",
+  "question": "How many items are located in Cabinet B?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "5",
+  "expectedEvidence": [
+   {
+    "row": 5,
+    "col": "location"
+   },
+   {
+    "row": 8,
+    "col": "location"
+   },
+   {
+    "row": 9,
+    "col": "location"
+   },
+   {
+    "row": 11,
+    "col": "location"
+   },
+   {
+    "row": 46,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 51,
+  "type": "T6",
+  "question": "How many items are located in Cold Room?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "2",
+  "expectedEvidence": [
+   {
+    "row": 2,
+    "col": "location"
+   },
+   {
+    "row": 10,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 52,
+  "type": "T6",
+  "question": "How many items are located in Vault Shelf 1?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "4",
+  "expectedEvidence": [
+   {
+    "row": 6,
+    "col": "location"
+   },
+   {
+    "row": 7,
+    "col": "location"
+   },
+   {
+    "row": 24,
+    "col": "location"
+   },
+   {
+    "row": 48,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 53,
+  "type": "T6",
+  "question": "How many items are located in Glass Case?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "3",
+  "expectedEvidence": [
+   {
+    "row": 22,
+    "col": "location"
+   },
+   {
+    "row": 26,
+    "col": "location"
+   },
+   {
+    "row": 28,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 54,
+  "type": "T6",
+  "question": "How many items are located in Reading Desk?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "5",
+  "expectedEvidence": [
+   {
+    "row": 37,
+    "col": "location"
+   },
+   {
+    "row": 38,
+    "col": "location"
+   },
+   {
+    "row": 39,
+    "col": "location"
+   },
+   {
+    "row": 40,
+    "col": "location"
+   },
+   {
+    "row": 41,
+    "col": "location"
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "type": "T7",
+  "question": "How many items are of type Reagent?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "12",
+  "expectedEvidence": [
+   {
+    "row": 1,
+    "col": "type"
+   },
+   {
+    "row": 2,
+    "col": "type"
+   },
+   {
+    "row": 3,
+    "col": "type"
+   },
+   {
+    "row": 4,
+    "col": "type"
+   },
+   {
+    "row": 5,
+    "col": "type"
+   },
+   {
+    "row": 6,
+    "col": "type"
+   },
+   {
+    "row": 7,
+    "col": "type"
+   },
+   {
+    "row": 8,
+    "col": "type"
+   },
+   {
+    "row": 9,
+    "col": "type"
+   },
+   {
+    "row": 10,
+    "col": "type"
+   },
+   {
+    "row": 11,
+    "col": "type"
+   },
+   {
+    "row": 12,
+    "col": "type"
+   }
+  ]
+ },
+ {
+  "id": 56,
+  "type": "T7",
+  "question": "How many items are of type Equipment?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "14",
+  "expectedEvidence": [
+   {
+    "row": 13,
+    "col": "type"
+   },
+   {
+    "row": 14,
+    "col": "type"
+   },
+   {
+    "row": 15,
+    "col": "type"
+   },
+   {
+    "row": 16,
+    "col": "type"
+   },
+   {
+    "row": 17,
+    "col": "type"
+   },
+   {
+    "row": 18,
+    "col": "type"
+   },
+   {
+    "row": 19,
+    "col": "type"
+   },
+   {
+    "row": 20,
+    "col": "type"
+   },
+   {
+    "row": 21,
+    "col": "type"
+   },
+   {
+    "row": 22,
+    "col": "type"
+   },
+   {
+    "row": 23,
+    "col": "type"
+   },
+   {
+    "row": 24,
+    "col": "type"
+   },
+   {
+    "row": 25,
+    "col": "type"
+   },
+   {
+    "row": 26,
+    "col": "type"
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "type": "T7",
+  "question": "How many items are of type Fixture?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "10",
+  "expectedEvidence": [
+   {
+    "row": 27,
+    "col": "type"
+   },
+   {
+    "row": 28,
+    "col": "type"
+   },
+   {
+    "row": 29,
+    "col": "type"
+   },
+   {
+    "row": 30,
+    "col": "type"
+   },
+   {
+    "row": 31,
+    "col": "type"
+   },
+   {
+    "row": 32,
+    "col": "type"
+   },
+   {
+    "row": 33,
+    "col": "type"
+   },
+   {
+    "row": 34,
+    "col": "type"
+   },
+   {
+    "row": 35,
+    "col": "type"
+   },
+   {
+    "row": 36,
+    "col": "type"
+   }
+  ]
+ },
+ {
+  "id": 58,
+  "type": "T7",
+  "question": "How many items are of type Record?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "6",
+  "expectedEvidence": [
+   {
+    "row": 37,
+    "col": "type"
+   },
+   {
+    "row": 38,
+    "col": "type"
+   },
+   {
+    "row": 39,
+    "col": "type"
+   },
+   {
+    "row": 40,
+    "col": "type"
+   },
+   {
+    "row": 41,
+    "col": "type"
+   },
+   {
+    "row": 42,
+    "col": "type"
+   }
+  ]
+ },
+ {
+  "id": 59,
+  "type": "T7",
+  "question": "How many items are of type Material?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "6",
+  "expectedEvidence": [
+   {
+    "row": 43,
+    "col": "type"
+   },
+   {
+    "row": 44,
+    "col": "type"
+   },
+   {
+    "row": 45,
+    "col": "type"
+   },
+   {
+    "row": 46,
+    "col": "type"
+   },
+   {
+    "row": 47,
+    "col": "type"
+   },
+   {
+    "row": 48,
+    "col": "type"
+   }
+  ]
+ },
+ {
+  "id": 60,
+  "type": "T8",
+  "question": "Which has the greater quantity, Sulfuric Acid or Mercury?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Sulfuric Acid",
+  "expectedEvidence": [
+   {
+    "row": 1,
+    "col": "quantity"
+   },
+   {
+    "row": 6,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 61,
+  "type": "T8",
+  "question": "Which has the greater quantity, Distilled Water or Ether?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Distilled Water",
+  "expectedEvidence": [
+   {
+    "row": 5,
+    "col": "quantity"
+   },
+   {
+    "row": 2,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "type": "T8",
+  "question": "Which has the greater quantity, Specimen Index Cards or Specimen Jar Set?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Specimen Index Cards",
+  "expectedEvidence": [
+   {
+    "row": 41,
+    "col": "quantity"
+   },
+   {
+    "row": 28,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 63,
+  "type": "T8",
+  "question": "Which has the greater quantity, Zinc Plates or Galvanic Battery Bank?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Zinc Plates",
+  "expectedEvidence": [
+   {
+    "row": 43,
+    "col": "quantity"
+   },
+   {
+    "row": 13,
+    "col": "quantity"
+   }
+  ]
+ },
+ {
+  "id": 64,
+  "type": "T9",
+  "question": "Which item has the role \"Charge storage capacitor\"?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Leyden Jar",
+  "expectedEvidence": [
+   {
+    "row": 16,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "type": "T9",
+  "question": "Which item has the role \"Vacuum chamber cover\"?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Glass Bell Jar",
+  "expectedEvidence": [
+   {
+    "row": 29,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 66,
+  "type": "T9",
+  "question": "Which item has the role \"Storm and pressure readings\"?",
+  "expectedStatus": "ANSWER",
+  "expectedAnswer": "Weather Observation Ledger",
+  "expectedEvidence": [
+   {
+    "row": 42,
+    "col": "role"
+   }
+  ]
+ },
+ {
+  "id": 67,
+  "type": "TRAP",
+  "question": "Where is the Chronium Crystal located?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 68,
+  "type": "TRAP",
+  "question": "What is the role of the Perpetual Motion Wheel?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 69,
+  "type": "TRAP",
+  "question": "What is the quantity of the Philosopher's Stone?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 70,
+  "type": "TRAP",
+  "question": "What is the hazard class of the Elixir of Life?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 71,
+  "type": "TRAP",
+  "question": "What is the Moonlight Condenser connected to?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 72,
+  "type": "TRAP",
+  "question": "What color is the Copper Coil?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 73,
+  "type": "TRAP",
+  "question": "When was the Leyden Jar acquired?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 74,
+  "type": "TRAP",
+  "question": "Who built the Vacuum Pump?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 75,
+  "type": "TRAP",
+  "question": "What is the price of the Ether?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 76,
+  "type": "TRAP",
+  "question": "How many items are located in the Attic?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 77,
+  "type": "TRAP",
+  "question": "How many items are located in the Dungeon?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 78,
+  "type": "TRAP",
+  "question": "How many items are of type Weapon?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 79,
+  "type": "TRAP",
+  "question": "Which has the greater quantity, the Copper Coil or the Chronium Crystal?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 80,
+  "type": "TRAP",
+  "question": "Which has the greater quantity, the Philosopher's Stone or the Ether?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ },
+ {
+  "id": 81,
+  "type": "TRAP",
+  "question": "Which item has the role \"Time travel\"?",
+  "expectedStatus": "ABSTAIN",
+  "expectedAnswer": null,
+  "expectedEvidence": []
+ }
+]

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stitched Ledger</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-title">STITCHED LEDGER</div>
+    <div class="header-subtitle">Deterministic record retrieval — no model, no guessing</div>
+    <div class="header-readouts">
+      <span class="readout"><span class="readout-label">ROWS</span><span class="readout-value" id="stat-rows">—</span></span>
+      <span class="readout"><span class="readout-label">COLUMNS</span><span class="readout-value" id="stat-cols">—</span></span>
+      <span class="readout"><span class="readout-label">ENGINE</span><span class="readout-value">DETERMINISTIC</span></span>
+    </div>
+  </header>
+
+  <main class="main-split">
+    <!-- LEFT: query panel -->
+    <section class="query-panel">
+      <div class="ask-row">
+        <input id="question-input" type="text" placeholder="Ask a question about the ledger…" autocomplete="off" />
+        <button id="ask-btn">Ask</button>
+      </div>
+
+      <div class="sample-chips" aria-label="Sample questions">
+        <button class="chip" data-q="Where is Sulfuric Acid located?">Where is Sulfuric Acid located?</button>
+        <button class="chip" data-q="How many items are located in Cabinet A?">How many items are located in Cabinet A?</button>
+        <button class="chip" data-q="Which has the greater quantity, Sulfuric Acid or Zinc Plates?">Which has the greater quantity, Sulfuric Acid or Zinc Plates?</button>
+        <button class="chip" data-q="Where is the Chronium Crystal located?">Where is the Chronium Crystal located?</button>
+      </div>
+
+      <div id="answer-card" class="answer-card hidden" aria-live="polite"></div>
+
+      <!-- Loader section -->
+      <div class="loader-section">
+        <div id="drop-zone" class="drop-zone" role="button" tabindex="0"
+             aria-label="Drop a CSV or TSV ledger file here, or click to choose a file">
+          Drop a .csv / .tsv ledger file here — or click to choose a file
+          <input id="file-input" type="file" accept=".csv,.tsv,text/csv,text/tab-separated-values" hidden />
+        </div>
+        <div class="loader-hint">
+          Header must contain: name, type, location, role, quantity, unit, hazard, links — links separated by ;
+        </div>
+        <div id="load-notice" class="load-notice hidden" aria-live="polite"></div>
+        <button id="restore-btn" class="restore-btn hidden">Restore built-in ledger</button>
+      </div>
+
+      <div class="verify-panel">
+        <button id="verify-btn">Run 66-Point Live Verification</button>
+        <div id="verify-custom-note" class="verify-custom-note hidden" aria-live="polite">
+          Live verification is available with the built-in ledger.
+        </div>
+        <div id="verify-result" class="verify-result hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT: ledger panel -->
+    <section class="ledger-panel">
+      <div class="ledger-scroll">
+        <table id="ledger-table" class="ledger-table">
+          <thead id="ledger-thead"></thead>
+          <tbody id="ledger-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Every answer is an exact lookup over the table above. Facts that are not in the table are answered with an abstention — never a guess.
+  </footer>
+
+  <script type="module" src="./ui/main.js"></script>
+</body>
+</html>
