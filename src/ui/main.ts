@@ -234,6 +234,12 @@ function setVerifyAvailable(available: boolean): void {
   if (verifyNote) {
     verifyNote.classList.toggle("hidden", available);
   }
+  if (!available) {
+    // A previous verification result belongs to the built-in ledger only.
+    // Clear it so it is never read as a result for a custom ledger.
+    verifyResult.innerHTML = "";
+    verifyResult.classList.add("hidden");
+  }
 }
 
 function normalizeWs(s: string): string {
